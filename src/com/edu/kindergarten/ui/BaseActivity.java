@@ -3,6 +3,7 @@ package com.edu.kindergarten.ui;
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 
 import com.edu.kindergarten.config.Constants;
@@ -20,5 +21,9 @@ public class BaseActivity extends Activity {
 		if (!ImageLoader.getInstance().isInited()) {
 			ImageLoaderConfig.initImageLoader(this, Constants.BASE_IMAGE_CACHE);
 		}
+	}
+	
+	public void back(View view) {
+		finish();
 	}
 }
